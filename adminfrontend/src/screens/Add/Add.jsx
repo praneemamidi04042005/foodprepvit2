@@ -29,7 +29,7 @@ const Add = ({url}) => {
     formData.append('category',data.category)
     formData.append('image',image)
     try {
-      const response=await axios.post(`${url}/api/food/add`,formData,{headers:{"Content-Type":"multipart/form-data"},})
+      const response=await axios.post(`${url}/api/food/add`,formData)
       toast(response.data.message)
     setData(
       {
